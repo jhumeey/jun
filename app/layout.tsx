@@ -13,10 +13,12 @@ const user = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Overview", href: "#", current: true },
+  { name: "Job Search", href: "#", current: false },
+  { name: "Talent", href: "#", current: false },
+  { name: "Schedule", href: "#", current: false },
+  { name: "History", href: "#", current: false },
+  { name: "Event", href: "#", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -37,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="font-manrope">
+      <body className="text-[#696974] dark:text-[#92929D]">
         {" "}
         <div className="min-h-full">
         <Disclosure as="nav" className="border-b border-gray-200 bg-white">
@@ -57,9 +59,9 @@ export default function RootLayout({
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? "border-indigo-500 text-gray-900"
+                                ? "border-green-900 text-gray-900"
                                 : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
-                              "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+                              "inline-flex items-center border-b-2 px-1 pt-1 text-base font-medium"
                             )}
                             aria-current={item.current ? "page" : undefined}
                           >
